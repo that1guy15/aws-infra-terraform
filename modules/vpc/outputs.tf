@@ -21,9 +21,9 @@ output "public_subnets" {
   value       = module.vpc.public_subnets
 }
 
-output "infra_subnets" {
-  description = "List of IDs of infra subnets"
-  value       = module.vpc.infra_subnets
+output "intra_subnets" {
+  description = "List of IDs of intra subnets"
+  value       = module.vpc.intra_subnets
 }
 
 # IPv6

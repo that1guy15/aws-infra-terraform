@@ -4,7 +4,7 @@ components in AWS across multiple regions using terraform. The goal is
 to programmatically deploy and manage multiple environments (production, 
 development, staging, etc) across any number of regions from a central 
 location while maintaining isolation between environments and regions 
-within Teffaform.
+within Terraform.
 
 # Architecture
 
@@ -69,5 +69,5 @@ terraform apply -var-file=us-east-1.tfvars
 Repeat these steps for additional environment and or regions
 
 
-Credit for the terraform organization and workspace setup goes here:
+Credit for terraform organization and workspace setup goes here:
 https://dev.to/sdileep/manage-a-multi-environment-multi-region-infrastructure-on-aws-using-terraform-1p2p

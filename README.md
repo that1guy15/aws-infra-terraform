@@ -6,9 +6,16 @@ development, staging, etc) across any number of regions from a central
 location while maintaining isolation between environments and regions 
 within Teffaform.
 
-#Architecture
+# Architecture
 
 ![AWS Infra Topology](./aws-infra-topology.png)
+
+| Environment | Region    | CIDR Block    |
+|-------------|-----------|---------------|
+| Production  | US-West-2 | 10.0.0.0/14   |
+| Production  | US-East-1 | 10.4.0.0/14   |
+| Development | US-West-2 | 172.16.0.0/14 |
+| Development | US-East-1 | 172.20.0.0/14 |
 
 
 # Setup
@@ -60,3 +67,7 @@ terraform apply -var-file=us-east-1.tfvars
 ```
 
 Repeat these steps for additional environment and or regions
+
+
+Credit for the terraform organization and workspace setup goes here:
+https://dev.to/sdileep/manage-a-multi-environment-multi-region-infrastructure-on-aws-using-terraform-1p2p

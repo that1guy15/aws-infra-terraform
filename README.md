@@ -58,15 +58,28 @@ want to deploy and work within
 cd environments/production 
 terraform workspace select us-west-2
 ```
-When ready `plan` and `apply` changes for each region
+### Bastion Host Access
+An AWS key-pair is created using the public key provided in the environment variable
+`TF_VAR_pub_key`
+The security group created uses the environment variable `TF_VAR_bastion_admins`
+```text
+export TF_VAR_pub_key='<your pub key here>'
+export TF_VAR_bastion_admins=['public_ip1', 'public_ip2']
+```
+
+### Deploy
+When ready `plan` and `apply` changes for each region. Dont forget to switch workspaces 
+when working with a different region
 ```
 terraform plan -var-file=us-west-2.tfvars
 terraform apply -var-file=us-west-2.tfvars
+
+terraform workspace select us-east-1
 terraform plan -var-file=us-east-1.tfvars
 terraform apply -var-file=us-east-1.tfvars
 ```
 
-Repeat these steps for additional environment and or regions
+Repeat these steps for additional environment.
 
 
 Credit for terraform organization and workspace setup goes here:

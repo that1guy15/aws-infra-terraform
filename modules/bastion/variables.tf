@@ -1,8 +1,10 @@
 variable "region" {}
 variable "profile" {}
+variable "vpc_id" {}
 variable "vpc_cidr" {}
-variable "private_subnets" {}
+variable "azs" {}
 variable "public_subnets" {}
+variable "ipv6_subnets" {}
 variable "environment" {}
 variable "bastion_admins" {}
 variable "pub_key" {}

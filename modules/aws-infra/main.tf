@@ -1,4 +1,4 @@
-module "vpc"{
+module "vpc" {
     source = "../vpc"
     region = var.region
     profile = var.profile

@@ -29,12 +29,12 @@ output "intra_subnets" {
 # IPv6
 output "ipv6_cidr_block" {
   description = "The IPv6 CIDR block"
-  value       = module.vpc.vpc_ipv6_cidr_block
+  value       = module.vpc.ipv6_cidr_block
 }
 
 output "ipv6_association_id" {
   description = "The association ID for the IPv6 CIDR block"
-  value       = module.vpc.vpc_ipv6_association_id
+  value       = module.vpc.ipv6_association_id
 }
 
 # NAT gateways
